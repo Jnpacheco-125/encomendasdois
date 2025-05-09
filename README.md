@@ -101,11 +101,35 @@ Projeto acadêmico desenvolvido como parte dos estudos de Java e Spring Boot, co
 
     Crie uma conta gratuita do Mailtrap em <https://mailtrap.io/> para obter suas próprias credenciais. Atualize o arquivo `application.properties` com suas credenciais.
 
-4.  **Compilar e executar a aplicação:**
-    ```bash
-    ./mvnw spring-boot:run
-    ```
+   4.  **Compilar e executar a aplicação:**
+       ```bash
+       ./mvnw spring-boot:run
+       ```
+       ⚠️ Mas atenção: o .env não funciona automaticamente no Maven.
+       E no seu .env, por exemplo:
 
+   
+   ```
+   dotenv
+   DB_URL=jdbc:postgresql://localhost:5432/encomendas
+   DB_USER=postgres
+   DB_PASS=senha123
+   E no seu application.properties:
+   ```
+    properties
+    spring.datasource.url=${DB_URL}
+    spring.datasource.username=${DB_USER}
+    spring.datasource.password=${DB_PASS}
+
+```
+    👇 Alternativa (para rodar testes/localmente)
+        Se quiser rodar sem o plugin, você pode:
+        Configurar variáveis de ambiente do sistema
+        No IntelliJ: Run > Edit Configurations > Environment Variables
+   ```
+Configurar variáveis de ambiente do sistema
+
+No IntelliJ: Run > Edit Configurations > Environment Variables.
 5.  **Acesse o Swagger UI:**
     A documentação da API estará disponível em: `http://localhost:8080/swagger-ui.html`
 
