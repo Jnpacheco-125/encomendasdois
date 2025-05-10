@@ -14,11 +14,9 @@ public interface EncomendaRepository {
 
     Optional<Encomenda> findById(Long id);
 
-    // Buscar todas as encomendas pendentes (ainda não retiradas)
     @Query("SELECT e FROM Encomenda e WHERE e.retirada = false")
     List<Encomenda> findAllByRetiradaFalse();
 
-    // Buscar encomendas por ID do morador destinatário
     List<Encomenda> findByMoradorDestinatarioId(Long moradorId);
 
     @Transactional

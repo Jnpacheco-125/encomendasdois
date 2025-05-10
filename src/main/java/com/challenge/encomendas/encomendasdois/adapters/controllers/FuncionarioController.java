@@ -12,7 +12,7 @@ import com.challenge.encomendas.encomendasdois.infrastructure.persistence.mapper
 import com.challenge.encomendas.encomendasdois.usecase.FuncionarioService;
 import com.challenge.encomendas.encomendasdois.usecase.auth.AuthService;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.media.ArraySchema;
+
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -173,7 +173,6 @@ public class FuncionarioController {
 
         return ResponseEntity.ok(funcionariosResposta);
     }
-
 
     @Operation(summary = "Deletar funcionário por ID", description = "Deleta um funcionário do sistema com base no seu ID.")
     @ApiResponses(value = {

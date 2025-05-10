@@ -48,7 +48,6 @@ public class FuncionarioJpaGateway implements FuncionarioGateway {
                 .map(FuncionarioMapper::toDomain);
     }
 
-
     @Override
     public void deleteById(Long id) {
         funcionarioJpaRepository.deleteById(id);

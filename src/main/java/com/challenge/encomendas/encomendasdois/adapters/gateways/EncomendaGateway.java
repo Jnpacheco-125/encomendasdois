@@ -12,19 +12,10 @@ public interface EncomendaGateway {
 
     @Transactional
     Encomenda save(Encomenda encomenda);
-
     Optional<Encomenda> findById(Long id);
-
-    // Buscar todas as encomendas ainda não retiradas
     List<Encomenda> findAllByRetiradaFalse();
-
-    // Buscar todas encomendas  retiradas
     Page<Encomenda> findAllByRetiradaTrue(Pageable pageable);
-
-
-    // Buscar encomendas por ID do morador destinatário
     List<Encomenda> findByMoradorDestinatarioId(Long moradorId);
-
     @Transactional
     void deleteById(Long id);
 }

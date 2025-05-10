@@ -16,7 +16,6 @@ public class Morador {
     private String senha; // Lembre-se de hashear a senha antes de salvar!
     private Set<Role> roles = new HashSet<>();
 
-    // Construtor padrão (sem argumentos)
     public Morador() {
     }
     public Morador(Long id, String nome, String telefone, String apartamento, String email, String senha) {
@@ -28,8 +27,6 @@ public class Morador {
         this.senha = senha;
     }
 
-
-    // Construtor com todos os campos, incluindo as roles
     public Morador(Long id, String nome, String telefone, String apartamento, String email, String senha, Set<Role> roles) {
         this.id = id;
         this.nome = nome;
@@ -40,7 +37,6 @@ public class Morador {
         this.roles = roles != null ? roles : new HashSet<>(); // Evita NullPointerException
     }
 
-    // Getters
     public Long getId() {
         return id;
     }
@@ -65,7 +61,7 @@ public class Morador {
         return senha;
     }
 
-    // Setters
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -92,7 +88,6 @@ public class Morador {
     public Set<Role> getRoles() { return roles; }
     public void setRoles(Set<Role> roles) { this.roles = roles; }
 
-    // Método auxiliar para adicionar uma role
     public void adicionarRole(Role role) {
         this.roles.add(role);
     }

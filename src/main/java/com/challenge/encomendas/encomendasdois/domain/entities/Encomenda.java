@@ -30,7 +30,7 @@ public class Encomenda {
         this.moradorDestinatario = moradorDestinatario;
     }
 
-    // Getters
+
     public Long getId() { return id; }
     public String getNomeDestinatario() { return nomeDestinatario; }
     public String getApartamento() { return apartamento; }
@@ -41,7 +41,7 @@ public class Encomenda {
     public Funcionario getFuncionarioRecebimento() { return funcionarioRecebimento; }
     public Morador getMoradorDestinatario() { return moradorDestinatario; }
 
-    // Setters para atributos que podem mudar
+
     public void setNomeDestinatario(String nomeDestinatario) {
         this.nomeDestinatario = nomeDestinatario;
     }
