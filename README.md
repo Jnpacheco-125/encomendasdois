@@ -16,7 +16,7 @@ Este projeto é um sistema desenvolvido em Java com Spring Boot, utiliza um banc
 * **Testes:** JUnit, Mockito
 * **IDE:** IntelliJ IDEA
 * **Controle de versão:** Git
-* **Conteinerização:** Docker (mencionado no objetivo)
+* **Conteinerização:** Docker 
 
 📦 **Funcionalidades**
 
@@ -79,7 +79,7 @@ Projeto acadêmico desenvolvido como parte dos estudos de Java e Spring Boot, co
 1.  **Clone o repositório:**
     ```bash
     git clone <URL do seu repositório GitHub>
-    cd encomendasum
+    cd encomendasdois
     ```
 
 2.  **Configurar o banco de dados:**
@@ -123,9 +123,9 @@ Projeto acadêmico desenvolvido como parte dos estudos de Java e Spring Boot, co
 
 ```
     👇 Alternativa (para rodar testes/localmente)
-        Se quiser rodar sem o plugin, você pode:
-        Configurar variáveis de ambiente do sistema
-        No IntelliJ: Run > Edit Configurations > Environment Variables
+          Se quiser rodar sem o plugin, você pode:
+       Configurar variáveis de ambiente do sistema
+          No IntelliJ: Run > Edit Configurations > Environment Variables // tem que adicionar tudo que ta no .env
    ```
 Configurar variáveis de ambiente do sistema
 
@@ -186,3 +186,6 @@ README.md: Documentação do projeto.
     * O tratamento de abordagens globais foi removido para resolver o problema de compatibilidade com o Swagger.
     * O tratamento de abordagens foi implementado de forma local, dentro de cada Controlador, utilizando o `try-catch` e `ResponseStatusException`. As respostas de erro são documentadas explicitamente em cada método do Controller com as anotações `@ApiResponse`, garantindo que o Swagger exiba as possíveis respostas de erro da API.
     * Foi investigado o uso de `@ExceptionHandler`, mas não foi possível resolver o problema ao longo do tempo.
+
+
+* **Todo o projeto foi desenvolvido com Inteligencia Artificial**

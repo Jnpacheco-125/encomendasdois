@@ -43,8 +43,6 @@ public class EncomendaMapper {
         return encomenda;
     }
 
-
-
     public static EncomendaResponseDTO toResponseDTO(Encomenda encomenda) {
         if (encomenda == null) {
             return null;

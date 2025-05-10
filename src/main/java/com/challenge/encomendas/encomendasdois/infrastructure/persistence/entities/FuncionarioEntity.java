@@ -34,5 +34,5 @@ public class FuncionarioEntity {
     @Column(name = "role")
     private Set<Role> roles = new HashSet<>();
 
-    // Getters e Setters
+
 }

@@ -14,7 +14,6 @@ public class Funcionario {
     private String senha;
     private Set<Role> roles = new HashSet<>();
 
-    // Construtores
     public Funcionario() {
     }
     public Funcionario(Long id, String nome, String email, String senha) {
@@ -33,7 +32,6 @@ public class Funcionario {
     }
 
 
-    // Getters e Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -49,7 +47,6 @@ public class Funcionario {
     public Set<Role> getRoles() { return roles; }
     public void setRoles(Set<Role> roles) { this.roles = roles; }
 
-    // Método auxiliar para adicionar uma role
     public void adicionarRole(Role role) {
         this.roles.add(role);
     }
