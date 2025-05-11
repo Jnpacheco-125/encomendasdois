@@ -83,11 +83,11 @@ Projeto acadêmico desenvolvido como parte dos estudos de Java e Spring Boot, co
     ```
 
 2.  **Configurar o banco de dados:**
-    A aplicação está configurada para usar PostgreSQL como banco de dados. Os detalhes de conexão estão definidos no `application.properties`.
+    A aplicação está configurada para usar PostgreSQL como banco de dados. Os detalhes de conexão estão definidos no `application.properties` e no ` .env`.
 
 3.  **Configurar o servidor de e-mail (Mailtrap):**
     Configuração do Envio de E-mails. A aplicação usa Mailtrap para envio de e-mails. Aqui estão os detalhes da configuração SMTP:
-    O aplicativo está configurado para usar o Mailtrap para envio de e-mails de desenvolvimento.
+    O aplicativo está configurado para usar o Mailtrap para envio de e-mails de desenvolvimento. Você pode configurar com o seu proprio email.
 
     ```properties
     spring.mail.host=sandbox.smtp.mailtrap.io
@@ -102,9 +102,11 @@ Projeto acadêmico desenvolvido como parte dos estudos de Java e Spring Boot, co
     Crie uma conta gratuita do Mailtrap em <https://mailtrap.io/> para obter suas próprias credenciais. Atualize o arquivo `application.properties` com suas credenciais.
 
    4.  **Compilar e executar a aplicação:**
+        Usando o botão do intellij, na classe principal. EncomendasApplications. Obs: depois de subi o docker
        ```bash
        ./mvnw spring-boot:run
        ```
+       
        ⚠️ Mas atenção: o .env não funciona automaticamente no Maven.
        E no seu .env, por exemplo:
 
@@ -131,9 +133,9 @@ Configurar variáveis de ambiente do sistema
 
 No IntelliJ: Run > Edit Configurations > Environment Variables.
 5.  **Acesse o Swagger UI:**
-    A documentação da API estará disponível em: `http://localhost:8080/swagger-ui.html`
+    A documentação da API estará disponível em: `http://localhost:8080/swagger-ui/index.html`
 
-**Execução com Docker (opcional)**
+**Execução com Docker **
 
 1.  **Execute o contêiner Docker:**
     No terminal do IntelliJ:
@@ -142,7 +144,7 @@ No IntelliJ: Run > Edit Configurations > Environment Variables.
     ```
 
 2.  O aplicativo estará acessível em `http://localhost:8080`
-3.  A interface do usuário do Swagger estará em `http://localhost:8080/swagger-ui.html`
+3.  A interface do usuário do Swagger estará em `http://localhost:8080/swagger-ui/index.html`
 
 📁 **Estrutura do Projeto**
 
@@ -186,6 +188,10 @@ README.md: Documentação do projeto.
     * O tratamento de abordagens globais foi removido para resolver o problema de compatibilidade com o Swagger.
     * O tratamento de abordagens foi implementado de forma local, dentro de cada Controlador, utilizando o `try-catch` e `ResponseStatusException`. As respostas de erro são documentadas explicitamente em cada método do Controller com as anotações `@ApiResponse`, garantindo que o Swagger exiba as possíveis respostas de erro da API.
     * Foi investigado o uso de `@ExceptionHandler`, mas não foi possível resolver o problema ao longo do tempo.
+ 
+**Testes de integração: Não implementados devido a problemas técnicos(Não consegui subi a aplicação, porque nao consegui gerar um novo .jar)**
+**Apesar dos desafios com testes de integração, o projeto cumpre os requisitos principais e está pronto para entrega.**
 
+**Percebi que a criação do codigo, deve ser a ultima coisa a ser feita, na criação do projeto.
 
-* **Todo o projeto foi desenvolvido com Inteligencia Artificial**
+**Todo o projeto foi desenvolvido com Inteligencia Artificial**
